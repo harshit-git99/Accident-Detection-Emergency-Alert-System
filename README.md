@@ -1,93 +1,89 @@
-# Blockchain-Based Attendance Management System (Python)
+# 🚨 Accident Detection & Emergency Alert System
 
-This project is a **console-based Blockchain Attendance Management System** implemented in pure Python. It uses blockchain concepts such as hashing, block linking, and immutability to securely store attendance records.
+This project is a Python-based prototype for an **Accident Detection &
+Emergency Alert System** designed to improve road safety by
+automatically detecting accidents and sending emergency alerts with
+real-time GPS location.
 
----
+It simulates sensor data and uses IP-based geolocation to demonstrate
+how such a system can work in real-world scenarios. This project is
+ideal for **resume, academic projects, and demos** related to automobile
+automation, IoT, and safety systems.
 
-## 🚀 Features
+------------------------------------------------------------------------
 
-- Blockchain implementation with SHA-256 hashing
-- Immutable attendance records
-- Add new attendance entries
-- View all attendance records
-- Verify blockchain integrity
-- Console-based menu system
+## 🔥 Features
 
----
+-   🚗 Sudden impact / accident detection using acceleration threshold
+-   📍 GPS location tracking (via IP-based API)
+-   🗺 Google Maps live location sharing
+-   📧 Automatic emergency alert via email
+-   ⏳ Cooldown mechanism to prevent repeated alerts
+-   🧪 Sensor data simulation (can be replaced with real hardware)
 
-## 🛠 Technologies Used
+------------------------------------------------------------------------
 
-- Python 3.x
-- Standard Python Libraries:
-  - `hashlib`
-  - `json`
-  - `time`
+## 🛠 Tech Stack
 
----
+-   Python 3.x
+-   SMTP (for sending email alerts)
+-   REST APIs
+-   Requests library
 
-## 📁 Project Structure
+------------------------------------------------------------------------
 
-```
-attendance_blockchain.py
-README.md
-requirements.txt
-```
+## 📂 Project Structure
 
----
+    accident_detection/
+    │
+    ├── main.py               # Main accident detection script
+    ├── README.md            # Project documentation
+    └── requirements.txt     # Dependencies
 
-## ▶ How to Run
+------------------------------------------------------------------------
 
-1. Make sure Python 3 is installed.
-2. Clone or download this project.
-3. Navigate to the project directory.
-4. Run the program:
+## ⚙️ Installation
 
-```bash
-python attendance_blockchain.py
-```
-
----
-
-## 📜 Menu Options
-
-```
-1. Mark Attendance
-2. View Attendance Records
-3. Verify Blockchain
-4. Exit
+``` bash
+pip install -r requirements.txt
 ```
 
----
+------------------------------------------------------------------------
 
-## 🔐 Blockchain Security
+## ▶️ How to Run
 
-Each attendance entry is stored in a block that contains:
-- Index
-- Timestamp
-- Attendance Data
-- Current Hash
-- Previous Hash
+``` bash
+python main.py
+```
 
-This ensures the data is **tamper-proof**.
+------------------------------------------------------------------------
 
----
+## 🔧 Configuration
 
-## 🧠 Future Enhancements
+Update these variables in the script:
 
-- Web Interface (Flask/Django)
-- QR Code Attendance
-- Face Recognition
-- Database Integration
-- Admin & Student Login
-- Export to Excel
-- Real Mining (Proof of Work)
+``` python
+ACCIDENT_THRESHOLD = 25.0
+EMERGENCY_EMAIL = "receiver@gmail.com"
+SENDER_EMAIL = "your_email@gmail.com"
+SENDER_PASSWORD = "your_app_password"
+```
 
----
+------------------------------------------------------------------------
 
-## 📄 License
+## 🚀 Future Enhancements
 
-This project is free to use for educational purposes.
+-   SMS alerts using Twilio
+-   WhatsApp notifications
+-   Raspberry Pi + Accelerometer + GPS module integration
+-   Firebase live tracking
+-   Mobile app interface
+-   AI-based crash severity detection
+-   Emergency voice alerts
 
----
+------------------------------------------------------------------------
 
-If you want the **web version + database + login + face recognition**, let me know 😎
+## ⚠ Disclaimer
+
+This is a prototype and should not be used as a real-life safety system
+without proper testing.
