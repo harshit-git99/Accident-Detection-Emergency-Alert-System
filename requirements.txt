@@ -1,5 +1,1 @@
-All modules like time, random, smtplib, email are built into Python.
 
-• SMS alerts → twilio
-• GPS modules → pyserial
-• Firebase → firebase-admin
