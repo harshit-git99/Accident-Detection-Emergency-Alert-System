@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Accident Detection & Emergency Alert System</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <h1>Accident Detection & Emergency Alert System</h1>
+      <p class="sub">Offline emergency notification via SIM network (GSM modem) — no internet required.</p>
+    </header>
+
+    <section class="card">
+      <h2>Emergency Trigger</h2>
+      <p>Use “Simulate Accident” for testing. In real deployment, connect your accident detection module to trigger the backend.</p>
+
+      <div class="row">
+        <label for="severity">Severity</label>
+        <select id="severity">
+          <option value="HIGH" selected>HIGH</option>
+          <option value="MEDIUM">MEDIUM</option>
+          <option value="LOW">LOW</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <label for="message">Message</label>
+        <input id="message" type="text" value="Accident detected! Please contact emergency services." />
+      </div>
+
+      <div class="actions">
+        <button id="btnTrigger" class="primary">Simulate Accident</button>
+        <button id="btnLocation" class="ghost">Attach Location</button>
+      </div>
+
+      <div class="meta">
+        <div><b>Latitude:</b> <span id="lat">—</span></div>
+        <div><b>Longitude:</b> <span id="lon">—</span></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>System Status</h2>
+      <pre id="status">Loading...</pre>
+    </section>
+
+    <footer class="footer">
+      <span>Tip: Update COM port + target phone number in backend config before using SMS.</span>
+    </footer>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
+
