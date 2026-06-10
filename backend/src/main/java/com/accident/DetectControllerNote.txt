@@ -1,0 +1,14 @@
+This backend is currently driven by the frontend simulation.
+
+To connect real accident detection hardware:
+- Replace the frontend trigger with your sensor/camera pipeline.
+- Call POST /api/trigger-accident with JSON payload.
+
+Example:
+{
+  "severity":"HIGH",
+  "message":"Crash detected",
+  "latitude":12.9716,
+  "longitude":77.5946
+}
+
